@@ -1,0 +1,173 @@
+@import "../common/Common.scss";
+
+.trends {
+  margin: 160px 0;
+  position: relative;
+
+  .trends-backgimg {
+    background: url(../../img/trends-flower.png) no-repeat;
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    height: 150%;
+    z-index: 1;
+  }
+
+  .trends-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+
+    .trends-texts {
+      z-index: 2;
+      margin-left: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .trends__title {
+        @include for-title;
+      }
+
+      .trends__link {
+        padding: 12px 100px;
+        margin-top: 18px;
+        @include for-links;
+      }
+    }
+
+    .trends-cards {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 15px;
+      position: relative;
+      z-index: 2;
+
+      .first-card {
+        position: relative;
+
+        .first-card__texts {
+          position: absolute;
+          max-width: 375px;
+          background: rgba(255, 255, 255, 0.3);
+          backdrop-filter: blur(12.5px);
+          border-radius: 0px 20px;
+          bottom: 0;
+          padding: 13px 15px 10px;
+
+          .first-card__heading {
+            display: flex;
+            gap: 8px;
+
+            .first-card__title {
+              @include featured-products(h4);
+            }
+
+            .first-card__price {
+              @include featured-products(span);
+            }
+          }
+
+          .first-card__description {
+            display: flex;
+            align-items: center;
+            gap: 61px;
+
+            .first-card__text {
+              @include featured-products(text);
+            }
+
+            .first-card__btn {
+              @include featured-products(btn);
+            }
+          }
+        }
+      }
+      .second-card {
+        position: relative;
+
+        .second-card__texts {
+          position: absolute;
+          max-width: 375px;
+          background: rgba(255, 255, 255, 0.3);
+          backdrop-filter: blur(12.5px);
+          border-radius: 0px 20px;
+          bottom: 0;
+          padding: 13px 15px 10px;
+
+          .second-card__heading {
+            display: flex;
+            gap: 8px;
+
+            .second-card__title {
+              @include featured-products(h4);
+            }
+
+            .second-card__price {
+              @include featured-products(span);
+            }
+          }
+
+          .second-card__description {
+            display: flex;
+            align-items: center;
+            gap: 61px;
+
+            .second-card__text {
+              @include featured-products(text);
+            }
+
+            .second-card__btn {
+              @include featured-products(btn);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .carusel__items {
+    display: flex;
+    gap: 6px;
+    position: absolute;
+    top: 450px;
+    right: 365px;
+    list-style-type: none;
+
+    .carusel__item:first-child button {
+      background-color: $main-green;
+    }
+
+    .carusel__btn {
+      cursor: pointer;
+      border-radius: 50%;
+      border: none;
+      background-color: $description-grey;
+      padding: 3px 3px;
+      transition: 0.5s ease;
+
+      &:hover {
+        background-color: $main-green;
+      }
+    }
+  }
+}
+@media screen and (max-width: $tablet) {
+  .trends {
+    .trends-block {
+      flex-direction: column;
+      gap: 500px;
+
+      .trends-cards {
+        flex-direction: column;
+        gap: 150px;
+      }
+    }
+
+    .carusel__items {
+      display: none;
+    }
+  }
+}

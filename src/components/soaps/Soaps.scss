@@ -1,0 +1,136 @@
+@import "../common/Common.scss";
+
+.soaps {
+  margin-top: 280px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: $main-green;
+
+  .soaps-texts {
+    z-index: 1;
+    position: relative;
+    width: 53%;
+    padding: 70px 5px 0 20px;
+
+    .soaps__bgimage {
+      position: absolute;
+      background: url(../../img/Texture-splatter.png);
+      z-index: 2;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      left: 0;
+    }
+
+    .soaps__title {
+      @include for-white-title;
+      z-index: 3;
+      position: relative;
+    }
+
+    .soaps__link {
+      @include for-white-links;
+      padding: 12px 90px;
+      margin-top: 35px;
+      z-index: 3;
+      position: relative;
+    }
+  }
+
+  .soaps-image {
+    width: 47%;
+
+    .soaps__image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+    }
+  }
+}
+
+@media screen and (max-width: $extra-tablet) {
+  .soaps {
+    .soaps-texts {
+      padding: 40px 5px 20px 20px;
+    }
+  }
+}
+@media screen and (max-width: $tablet) {
+  .soaps {
+    margin-top: 40px;
+    .soaps-texts {
+      padding: 40px 5px 20px 20px;
+      .soaps__title {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .soaps {
+    margin-top: 40px;
+    .soaps-texts {
+      padding: 35px 5px 15px 15px;
+
+      .soaps__title {
+        font-size: 20px;
+      }
+
+      .soaps__link {
+        @include for-white-links;
+        padding: 8px 40px;
+        margin-top: 15px;
+        z-index: 3;
+        position: relative;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .soaps {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .soaps-texts {
+      position: absolute;
+      padding: 0 20px;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .soaps__title {
+        font-size: 40px;
+        text-align: center;
+        position: static;
+      }
+
+      .soaps__link {
+        @include for-white-links;
+        padding: 12px 90px;
+        margin-top: 25px;
+        position: static;
+      }
+
+      .soaps__bgimage {
+        display: none;
+      }
+    }
+
+    .soaps-image {
+      width: 100%;
+      background: url(../../img/soapsImage.png) no-repeat center;
+      height: 600px;
+      margin: 0 auto;
+      background-size: cover;
+      .soaps__image {
+        display: none;
+      }
+    }
+  }
+}

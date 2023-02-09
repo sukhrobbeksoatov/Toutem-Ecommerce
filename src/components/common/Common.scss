@@ -1,0 +1,47 @@
+@import "./Variables.scss";
+@import "./Mixins.scss";
+@import "./Fonts.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+}
+
+/* Media queries for responsive type */
+
+@media screen and (max-width: $desktop-I) {
+  .container {
+    max-width: $desktop-I;
+  }
+}
+
+@media screen and (max-width: $extra-tablet) {
+  .container {
+    max-width: $extra-tablet;
+    padding: 0px 6px;
+  }
+}
+@media screen and (max-width: $tablet) {
+  .container {
+    max-width: $tablet;
+    padding: 0px 6px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .container {
+    max-width: $mobile;
+    padding: 0 8px;
+  }
+}

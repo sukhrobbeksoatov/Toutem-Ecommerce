@@ -1,0 +1,68 @@
+@import "../common/Common.scss";
+
+.blog {
+  margin-top: 130px;
+  margin-bottom: 74px;
+
+  .blog__title {
+    @include for-title;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .blog-cards {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+    .blog-card {
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      max-width: 371px;
+      cursor: pointer;
+      
+      .blog__img {
+        width: 100%;
+      }
+    }
+
+    .info-card {
+      padding: 0 10px 22px;
+
+      
+      .info-card__heading {
+        font-family: "SF Pro Display";
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: $main-green;
+        margin-top: 14px;
+      }
+  
+      .info-card__text {
+        margin-top: 30px;
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #4b5563;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .blog {
+    .blog__title {
+      font-size: 30px;
+    }
+
+    .blog-cards {
+      justify-content: center;
+      row-gap: 70px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "../common/Common.scss";
+
+.categories__cards {
+  margin-top: 110px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
+  list-style-type: none;
+
+  .categories__card {
+    cursor: pointer;
+    max-width: 250px;
+    max-height: 250px;
+    padding: 60px;
+    text-align: center;
+    background: #f9fafb;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 0px 20px;
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: $main-green;
+    }
+
+    .categories__link {
+      text-decoration: none;
+      color: $main-green;
+      transition: 0.3s ease;
+      font-family: "SF Pro Display";
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    &:hover .categories__link {
+      color: $main-white;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .categories__cards {
+    flex-direction: column;
+  }
+}

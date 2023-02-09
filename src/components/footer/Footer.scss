@@ -1,0 +1,55 @@
+@import "../common/Common.scss";
+
+.footer {
+  background-color: $footer-color;
+  padding: 22px 0 30px;
+  
+  .footer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .footer-nav__heading {
+    text-align: center;
+    font-family: "SF Pro Display";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: $main-green;
+  }
+
+  .footer-nav__item {
+    list-style-type: none;
+    text-align: center;
+  }
+
+  .footer-nav__link {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $description-grey;
+    text-decoration: none;
+  }
+
+  .footer__description {
+    font-family: "SF Pro Display";
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 50px;
+    line-height: 25px;
+    text-align: center;
+    color: #6b7280;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .footer {
+    .footer-nav {
+      flex-direction: column;
+    }
+  }
+}

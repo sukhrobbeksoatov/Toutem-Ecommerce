@@ -1,0 +1,123 @@
+@import "../common/Common.scss";
+
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 23px 0;
+  background-color: $main-white;
+
+  .nav {
+    position: relative;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: space-between;
+
+    #hamburger {
+      display: none;
+    }
+
+    #close,
+    #menu {
+      position: fixed;
+      background-color: $main-white;
+      border-radius: 5px;
+      top: 18px;
+      right: 5px;
+      font-size: 40px;
+      display: none;
+    }
+
+    .nav__items {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      list-style-type: none;
+
+      .nav__link {
+        text-decoration: none;
+        font-family: "Sf Pro Display";
+        font-weight: 600;
+        font-size: 12px;
+        color: $main-grey;
+        text-transform: uppercase;
+      }
+    }
+
+    .add-menu {
+      padding-left: 98px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      img {
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &:active {
+          transform: scale(0.7);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $extra-tablet) {
+  .header {
+    position: static;
+
+    .nav {
+      box-shadow: none;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .header {
+    .nav {
+      #menu {
+        display: inline-block;
+        z-index: 101;
+      }
+
+      #hamburger:checked ~ .nav__items {
+        right: 0;
+      }
+
+      #hamburger:checked + .hamburger #close {
+        display: inline-block;
+        z-index: 101;
+      }
+
+      #hamburger:checked + .hamburger #menu {
+        display: none;
+        z-index: 101;
+      }
+      .nav__items {
+        flex-direction: column;
+        gap: 20px;
+        background-color: #ffffff;
+        padding: 55px 0 0 40px;
+        height: 100vh;
+        width: 39%;
+        align-items: flex-start;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        right: -100%;
+        transition: 0.5s ease;
+
+        .nav__link {
+          font-size: 14px;
+        }
+      }
+
+      .add-menu {
+        display: none;
+      }
+    }
+  }
+}

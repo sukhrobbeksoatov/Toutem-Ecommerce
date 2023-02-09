@@ -1,0 +1,102 @@
+@mixin for-title {
+  font-family: "SF Pro Rounded";
+  font-weight: 600;
+  font-size: 50px;
+  text-align: right;
+  color: $main-green;
+}
+
+@mixin for-white-title {
+  font-family: "SF Pro Rounded";
+  font-weight: 600;
+  font-size: 36px;
+  color: $main-white;
+}
+
+@mixin for-description {
+  font-family: "SF Pro Display";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: $description-grey;
+}
+
+@mixin for-links {
+  color: $main-white;
+  background: $main-green;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: .3s ease;
+}
+
+@mixin for-white-links {
+  color: $main-green;
+  background: $main-white;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: .3s ease;
+}
+
+@mixin featured-products($featured-product) {
+  @if $featured-product == h4 {
+    font-family: "SF Pro Display";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: $main-grey;
+  } @else if $featured-product == span {
+    padding: 4px 6px 2px;
+    text-align: center;
+    cursor: pointer;
+    color: $main-white;
+    background-color: $main-green;
+    border-radius: 8px;
+    font-family: "SF Pro Display";
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+    &:focus {
+      transform: scale(0.9);
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  } @else if $featured-product == text {
+    font-family: "SF Pro Display";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #6b7280;
+  } @else {
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+    &:focus {
+      transform: scale(0.9);
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
