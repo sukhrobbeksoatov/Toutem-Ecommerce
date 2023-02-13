@@ -48,11 +48,13 @@
     }
   }
 }
+
 @media screen and (max-width: $extra-tablet) {
   .hero {
     margin-top: 0;
   }
 }
+
 @media (max-width: $tablet) {
   .hero {
     margin-top: 0;
@@ -110,6 +112,7 @@
         text-align: center;
       }
     }
+
     .hero-img {
       width: 90%;
 
@@ -120,6 +123,7 @@
         top: 0;
         width: 100%;
       }
+
       .hero__img {
         width: 70%;
         margin: 70px 40px;

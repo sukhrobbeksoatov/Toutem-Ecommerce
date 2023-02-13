@@ -13,7 +13,7 @@ import Footer from "./components/footer/Footer"
 
 function App() {
   return (
-    <>
+    <main>
       <Header />
       <Hero />
       <Explore />
@@ -23,7 +23,7 @@ function App() {
       <Trends />
       <Blog />
       <Footer />
-    </>
+    </main>
   )
 }
 
